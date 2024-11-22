@@ -3,14 +3,27 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        protected string Modelo { get; set; }
+        protected string IMEI { get; set; }
+        protected int Memoria { get; set; }
 
-        public Smartphone(string numero)
+        
+
+        public Smartphone(string numero, string modelo, string imei, int memoria)
         {
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            Modelo = modelo;
+            IMEI = imei;
+            Memoria = memoria;
+           
         }
 
+        protected Smartphone(string numero)
+        {
+            Numero = numero;
+        }
+
+       
         public void Ligar()
         {
             Console.WriteLine("Ligando...");
@@ -24,3 +37,11 @@ namespace DesafioPOO.Models
         public abstract void InstalarAplicativo(string nomeApp);
     }
 }
+
+
+
+
+
+
+// Projeto de finalização curso de C# .NET 
+// Conceitos de POO, Abstração, Herança de Classes, Classes abstratas e métodos.
